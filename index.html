@@ -30,7 +30,7 @@
 
                 <nav>
                     <ul class="nav-section">
-                        <li>
+                        <li class="nav-selection">
                             <a class="nav-link" href="./index.html">Agencja</a>
                         </li>
                         <li>
@@ -75,9 +75,28 @@
                     <h1 class="main-text">
                         EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
                     </h1>
-                    <button class="service-button" type="button">
+                    <button
+                        data-modal-open
+                        class="service-button"
+                        type="button"
+                    >
                         Zamów Usługe
                     </button>
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            <button
+                                class="close-modal"
+                                data-modal-close
+                                type="button"
+                            >
+                                <svg width="18px" height="18px">
+                                    <use
+                                        href="./images/icons.svg#icon-close"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="section">
@@ -151,28 +170,43 @@
                     <h2 class="present-and-team-title">Czym się zajmujemy</h2>
                     <ul class="what-we-do">
                         <li>
-                            <img
-                                src="./images/image1.jpg"
-                                alt="programista-kodujący-program"
-                                width="370"
-                                height="294"
-                            />
+                            <figure class="wwd-title">
+                                <img
+                                    src="./images/image1.jpg"
+                                    alt="programista-kodujący-program"
+                                    width="370"
+                                    height="294"
+                                />
+                                <figcaption class="wwd-img-title">
+                                    APLIKACJE KOMPUTEROWE
+                                </figcaption>
+                            </figure>
                         </li>
                         <li>
-                            <img
-                                src="./images/image2.jpg"
-                                alt="projektant-pracujący-nad-aplikacją-na-telefon"
-                                width="370"
-                                height="294"
-                            />
+                            <figure class="wwd-title">
+                                <img
+                                    src="./images/image2.jpg"
+                                    alt="projektant-pracujący-nad-aplikacją-na-telefon"
+                                    width="370"
+                                    height="294"
+                                />
+                                <figcaption class="wwd-img-title">
+                                    APLIKACJE MOBILNE
+                                </figcaption>
+                            </figure>
                         </li>
                         <li>
-                            <img
-                                src="./images/image3.jpg"
-                                alt="designer-pracujący-nad-kolorystyką-strony"
-                                width="370"
-                                height="294"
-                            />
+                            <figure class="wwd-title">
+                                <img
+                                    src="./images/image3.jpg"
+                                    alt="designer-pracujący-nad-kolorystyką-strony"
+                                    width="370"
+                                    height="294"
+                                />
+                                <figcaption class="wwd-img-title">
+                                    ROZWIĄZANIA GRAFICZNE
+                                </figcaption>
+                            </figure>
                         </li>
                     </ul>
                 </div>
@@ -485,6 +519,7 @@
                     </div>
                 </div>
             </section>
+            <script src="./js/modal.js"></script>
         </main>
         <footer class="footer-background">
             <div class="container footer">
